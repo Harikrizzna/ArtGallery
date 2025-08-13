@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Art Gallery</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: url("https://wallpapers.com/images/hd/minecraft-great-cave-walls-forest-hd-mm9b3bqe6qc6s96f.jpg") no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.85);
+      backdrop-filter: blur(6px);
+    }
+    .card {
+      background-color: rgba(0, 0, 0, 0.75);
+      border: none;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    }
+    .card:hover {
+      transform: translateY(-5px) scale(1.03);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.6);
+    }
+    .card img {
+      border-top-left-radius: .5rem;
+      border-top-right-radius: .5rem;
+    }
+    .section {
+      display: none;
+      padding-top: 100px;
+      animation: fadeIn 0.6s ease-in-out;
+    }
+    #home {
+      display: block;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity: 1;}
+    }
+    h1, h2, h5 {
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
+    }
+    .btn {
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="#" onclick="showSection('home')">🎨 Art Gallery</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('login')">Login</a></li>
+        <li class="nav-item"><a class="nav-link" href="#" onclick="showSection('signup')">Sign Up</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Home / Gallery -->
+<section id="home" class="section">
+  <div class="container">
+    <h1 class="text-center mb-4">Welcome to the Art Gallery</h1>
+    <p class="text-center mb-5">Discover stunning creations from talented artists around the world.</p>
+    <div class="row g-4">
+      <!-- Art Tile 1 -->
+      <div class="col-md-4">
+        <div class="card text-white">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJR_khY9wHM4uQVnOjUBR_cak_mUZUuVZ-wQ&s" class="card-img-top">
+          <div class="card-body text-center">
+            <h5>Skull On Fire</h5>
+            <p>Kristoffer Zetterstrand</p>
+            <button class="btn btn-primary btn-sm" onclick="showSection('art1')">View</button>
+          </div>
+        </div>
+      </div>
+      <!-- Art Tile 2 -->
+      <div class="col-md-4">
+        <div class="card text-white">
+          <img src="https://static.beebom.com/wp-content/uploads/2022/04/Minecraft-paintings-Unpacked.jpg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5>Unpacked</h5>
+            <p>Sarah Boeving</p>
+            <button class="btn btn-primary btn-sm" onclick="showSection('art2')">View</button>
+          </div>
+        </div>
+      </div>
+      <!-- Art Tile 3 -->
+      <div class="col-md-4">
+        <div class="card text-white">
+          <img src="https://static.beebom.com/wp-content/uploads/2022/04/Minecraft-paintings-Bouquet.jpg" class="card-img-top">
+          <div class="card-body text-center">
+            <h5>Bouquet</h5>
+            <p>Kristoffer Zetterstrand</p>
+            <button class="btn btn-primary btn-sm" onclick="showSection('art3')">View</button>
+          </div>
+        </div>
+      </div>
+      <!-- Art Tile 4 -->
+      <div class="col-md-4">
+        <div class="card text-white">
+          <img src="https://static.beebom.com/wp-content/uploads/2022/04/Minecraft-paintings-Skull-and-Roses.jpg?quality=75&strip=all" class="card-img-top">
+          <div class="card-body text-center">
+            <h5>Skull and Roses</h5>
+            <p>Kristoffer Zetterstrand</p>
+            <button class="btn btn-primary btn-sm" onclick="showSection('art4')">View</button>
+          </div>
+        </div>
+      </div>
+      <!-- Art Tile 5 -->
+      <div class="col-md-4">
+        <div class="card text-white">
+          <img src="https://static.beebom.com/wp-content/uploads/2022/04/Minecraft-paintings-Mortal-Coil.jpg?quality=75&strip=all" class="card-img-top">
+          <div class="card-body text-center">
+            <h5>Mortal Coil</h5>
+            <p>Kristoffer Zetterstrand</p>
+            <button class="btn btn-primary btn-sm" onclick="showSection('art5')">View</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Login -->
+<section id="login" class="section">
+  <div class="container">
+    <h2 class="text-center mb-4">Login</h2>
+    <form class="p-4 rounded shadow" style="background-color: rgba(0,0,0,0.6);">
+      <input type="email" class="form-control mb-3" placeholder="Email">
+      <input type="password" class="form-control mb-3" placeholder="Password">
+      <button class="btn btn-success w-100">Login</button>
+    </form>
+  </div>
+</section>
+
+<!-- Sign Up -->
+<section id="signup" class="section">
+  <div class="container">
+    <h2 class="text-center mb-4">Sign Up</h2>
+    <form class="p-4 rounded shadow" style="background-color: rgba(0,0,0,0.6);">
+      <input type="text" class="form-control mb-3" placeholder="Full Name">
+      <input type="email" class="form-control mb-3" placeholder="Email">
+      <input type="password" class="form-control mb-3" placeholder="Password">
+      <button class="btn btn-primary w-100">Sign Up</button>
+    </form>
+  </div>
+</section>
+
+<!-- Art Details -->
+<section id="art1" class="section">
+  <div class="container">
+    <h2>Skull On Fire</h2>
+    <p>Year: 2020</p>
+    <p>Description: A modern depiction of abstract fire and human elements.</p>
+    <button class="btn btn-secondary" onclick="showSection('home')">Back to Gallery</button>
+  </div>
+</section>
+
+<section id="art2" class="section">
+  <div class="container">
+    <h2>Unpacked</h2>
+    <p>Year: 2021</p>
+    <p>Description: A creative painting inspired by the Minecraft universe.</p>
+    <button class="btn btn-secondary" onclick="showSection('home')">Back to Gallery</button>
+  </div>
+</section>
+
+<section id="art3" class="section">
+  <div class="container">
+    <h2>Bouquet</h2>
+    <p>Year: 2022</p>
+    <p>Description: A floral-themed artwork filled with vibrant colors.</p>
+    <button class="btn btn-secondary" onclick="showSection('home')">Back to Gallery</button>
+  </div>
+</section>
+
+<section id="art4" class="section">
+  <div class="container">
+    <h2>Skull and Roses</h2>
+    <p>Year: 2019</p>
+    <p>Description: A dark yet beautiful representation of life and death.</p>
+    <button class="btn btn-secondary" onclick="showSection('home')">Back to Gallery</button>
+  </div>
+</section>
+
+<section id="art5" class="section">
+  <div class="container">
+    <h2>Mortal Coil</h2>
+    <p>Year: 2023</p>
+    <p>Description: "Mortal Coil" is a contemplative piece exploring the fragility and transience of human life. Through layered textures and muted tones, it reflects on the inevitable passage of time, the cycles of existence, and the beauty found within impermanence.</p>
+    <button class="btn btn-secondary" onclick="showSection('home')">Back to Gallery</button>
+  </div>
+</section>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('.section').forEach(sec => sec.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
