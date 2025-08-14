@@ -28,4 +28,6 @@ The site showcases 5 unique artworks with their descriptions, creation years, an
 
 ---
 
-## 📂 Project Structure
+
+
+
